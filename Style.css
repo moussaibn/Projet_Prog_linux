@@ -1,0 +1,22 @@
+html {
+
+	margin: 2;
+	padding: 0;
+	border: 0 none;
+}
+
+body {
+	margin: 5px;
+	padding: 0;
+	border: 0 none;
+  font-size: 1,6em;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+}
+object {
+  width:90%;
+  height:70%; 
+  margin: 5%;
+  align-self: center;
+}
