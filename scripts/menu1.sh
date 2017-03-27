@@ -1,6 +1,6 @@
 #!/bin/bash
 nom="Moussa Ndiaye"
-menu1=$(dialog --title "Test Menu Dialog" --menu "Bonjour $nom\n
+menu1=$(dialog --cancel-label "Quitter" --title "Test Menu Dialog" --menu "Bonjour $nom\n
 	Choisissez l'action a faire" 15 60 5 \
 "1" "Installation de paquets" \
 "2" "VOD:Video de Cours" \
@@ -11,10 +11,11 @@ menu1=$(dialog --title "Test Menu Dialog" --menu "Bonjour $nom\n
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
 	clear
-	case menu1 in
+	echo $menu1
+	case $menu1 in
 		1 )
 				$(chmod a+x menuInstall.sh)
-				$(./menuInstall.sh)
+				./menuInstall.sh
 				;;
 		2 )
 				$(chmod a+x menuVideos.sh)

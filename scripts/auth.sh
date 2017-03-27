@@ -14,9 +14,10 @@ VALUES=$(dialog --ok-label "Connexion" \
 
 # close fd
 exec 3>&-
-$(echo $VALUES>donnees.txt)
 # display values just entered
 mlogin=$(echo $VALUES| cut -d " " -f1 )
 dpasse=$(echo $VALUES| cut -d " " -f2 )
 
 echo "LOGIN :" $mlogin
+$(chmod a+x menu1.sh)
+$(./menu1.sh)

@@ -1,6 +1,6 @@
 #!/bin/bash
 nom="Moussa Ndiaye"
-menu1=$(dialog --title "Support de cours " --menu "Bonjour $nom\n
+support=$(dialog --cancel-label "Retour" --title "Support de cours " --menu "Bonjour $nom\n
 	Choisissez le SupportP a visualiser" 15 60 5 \
 "1" "Support 1" \
 "2" "Support 2" \
@@ -11,23 +11,23 @@ menu1=$(dialog --title "Support de cours " --menu "Bonjour $nom\n
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
 	clear
-	# case menu1 in
-	# 	1 )
-	# 			$(apt-get inslall)
-	# 			;;
-	# 	2 )
-	# 			$(./menuVideos.sh)
-	# 			;;
-	# 	3 )
-	# 			$(./maths.sh)
-	# 			;;
-	# 	4 )
-	# 			$(./menuSupports.sh)
-	# 			;;
-	# 	5 )
-	# 			$(./terminal.sh)
-	# 			;;
+	case $support in
+		1 )
+				echo "Ouvrir Support 1"
+				;;
+		2 )
+				echo "Ouvrir Support 2"
+				;;
+		3 )
+				echo "Ouvrir Support 3"
+				;;
+		4 )
+				echo "Ouvrir Support 4"
+				;;
+		5 )
+				echo "Ouvrir Support 5"
+				;;
 	esac
 else
-    echo "You chose Cancel."
+		$(./menu1.sh)
 fi

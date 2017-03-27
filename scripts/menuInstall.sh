@@ -1,6 +1,6 @@
 #!/bin/bash
 nom="Moussa Ndiaye"
-menu1=$(dialog --title "Installation de package" --menu "Bonjour $nom\n
+installer=$(dialog --cancel-label "Retour" --title "Installation de package" --menu "Bonjour $nom\n
 	Choisissez le packet a installer" 15 60 5 \
 "1" "Google Chrome" \
 "2" "VLC Media Player" \
@@ -11,23 +11,28 @@ menu1=$(dialog --title "Installation de package" --menu "Bonjour $nom\n
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
 	clear
-	# case menu1 in
-	# 	1 )
-	# 			$(apt-get inslall)
-	# 			;;
-	# 	2 )
-	# 			$(./menuVideos.sh)
-	# 			;;
-	# 	3 )
-	# 			$(./maths.sh)
-	# 			;;
-	# 	4 )
-	# 			$(./menuSupports.sh)
-	# 			;;
-	# 	5 )
-	# 			$(./terminal.sh)
-	# 			;;
+	case $installer in
+		1 )
+				echo "apt-get inslall chromium"
+				# $(apt-get inslall )
+				;;
+		2 )
+				echo "apt-get inslall chromium"
+				# $(apt-get inslall )
+				;;
+		3 )
+				echo "apt-get inslall chromium"
+				# $(apt-get inslall )
+				;;
+		4 )
+				echo "apt-get inslall chromium"
+				# $(apt-get inslall )$(./menuSupports.sh)
+				;;
+		5 )
+				echo "apt-get inslall chromium"
+				# $(apt-get inslall )$(./terminal.sh)
+				;;
 	esac
 else
-    echo "You chose Cancel."
+		$(./menu1.sh)
 fi

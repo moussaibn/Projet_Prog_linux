@@ -1,6 +1,6 @@
 #!/bin/bash
 nom="Moussa Ndiaye"
-menu1=$(dialog --title "Videos de cours de package" --menu "Bonjour $nom\n
+video=$(dialog --cancel-label "Retour" --title "Videos de cours de package" --menu "Bonjour $nom\n
 	Choisissez le cours a visualiser" 15 60 5 \
 "1" "Video 1" \
 "2" "Video 2" \
@@ -11,23 +11,23 @@ menu1=$(dialog --title "Videos de cours de package" --menu "Bonjour $nom\n
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
 	clear
-	# case menu1 in
-	# 	1 )
-	# 			$(apt-get inslall)
-	# 			;;
-	# 	2 )
-	# 			$(./menuVideos.sh)
-	# 			;;
-	# 	3 )
-	# 			$(./maths.sh)
-	# 			;;
-	# 	4 )
-	# 			$(./menuSupports.sh)
-	# 			;;
-	# 	5 )
-	# 			$(./terminal.sh)
-	# 			;;
+	case $video in
+		1 )
+				echo "apt-get inslall chromium"
+				;;
+		2 )
+				echo "apt-get inslall chromium"
+				;;
+		3 )
+				echo "apt-get inslall chromium"
+				;;
+		4 )
+				echo "apt-get inslall chromium"
+				;;
+		5 )
+				echo "apt-get inslall chromium"
+				;;
 	esac
 else
-    echo "You chose Cancel."
+		$(./menu1.sh)
 fi
