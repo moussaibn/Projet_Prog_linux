@@ -13,7 +13,9 @@ if [ $exitstatus = 0 ]; then
 	clear
 	case $video in
 		1 )
-				echo "apt-get inslall chromium"
+				$(google-chrome http://localhost:8080/Projet_Prog_linux/pagesWeb/pageVOD.php?nom=Video1.mp4)
+
+				.
 				;;
 		2 )
 				echo "apt-get inslall chromium"

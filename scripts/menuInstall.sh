@@ -3,9 +3,9 @@ nom="Moussa Ndiaye"
 installer=$(dialog --cancel-label "Retour" --title "Installation de package" --menu "Bonjour $nom\n
 	Choisissez le packet a installer" 15 60 5 \
 "1" "Google Chrome" \
-"2" "VLC Media Player" \
-"3" "Python" \
-"4" "Sublime text" \
+"2" "Kannel" \
+"3" "D.N.S." \
+"4" "				sudo apt-get install apache2 php5" \
 "5" "Autre package"  3>&1 1>&2 2>&3)
 
 exitstatus=$?
@@ -14,23 +14,18 @@ if [ $exitstatus = 0 ]; then
 	case $installer in
 		1 )
 				echo "apt-get inslall chromium"
-				# $(apt-get inslall )
 				;;
 		2 )
-				echo "apt-get inslall chromium"
-				# $(apt-get inslall )
+				echo "sudo apt-get install kannel"
 				;;
 		3 )
-				echo "apt-get inslall chromium"
-				# $(apt-get inslall )
+				echo "sudo apt-get install bind9 dnsutils"
 				;;
 		4 )
-				echo "apt-get inslall chromium"
-				# $(apt-get inslall )$(./menuSupports.sh)
+				echo "sudo apt-get install apache2 php5"
 				;;
-		5 )
-				echo "apt-get inslall chromium"
-				# $(apt-get inslall )$(./terminal.sh)
+		* )
+				echo "apt-get inslall "$installer
 				;;
 	esac
 else
