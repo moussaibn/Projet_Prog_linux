@@ -23,17 +23,8 @@
     <div class="navbar navbar-inverse set-radius-zero" >
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-
-                    PLATEFORME DE VIDEOS EDUCATIVES
-                </a>
-
-            </div>
+            <h1 > <img src="logo.ico" />PLATEFORME EDUCATIVE</h1> 
+           </div>
 
         </div>
     </div>
@@ -47,6 +38,7 @@
                             </div>
 
         </div>
+
              
              <div class="row">
 
