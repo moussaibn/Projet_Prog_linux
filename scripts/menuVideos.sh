@@ -13,21 +13,24 @@ if [ $exitstatus = 0 ]; then
 	clear
 	case $video in
 		1 )
-				$(google-chrome http://localhost:8080/Projet_Prog_linux/pagesWeb/pageVOD.php?nom=Video1.mp4)
-
-				.
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Videos/Video1.mp4)
+				$(./menuVideos.sh)
 				;;
 		2 )
-				echo "apt-get inslall chromium"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Videos/Video2.mp4)
+				$(./menuVideos.sh)
 				;;
 		3 )
-				echo "apt-get inslall chromium"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Videos/Video3.mp4)
+				$(./menuVideos.sh)
 				;;
 		4 )
-				echo "apt-get inslall chromium"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Videos/Video4.mp4)
+				$(./menuVideos.sh)
 				;;
 		5 )
-				echo "apt-get inslall chromium"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Videos/Video5.mp4)
+				$(./menuVideos.sh)
 				;;
 	esac
 else

@@ -13,19 +13,26 @@ if [ $exitstatus = 0 ]; then
 	clear
 	case $support in
 		1 )
-				echo "Ouvrir Support 1"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Supports/Support1.pdf)
+				$(./menuSupports.sh)
 				;;
 		2 )
-				echo "Ouvrir Support 2"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Supports/Support2.pdf)
+				$(./menuSupports.sh)
+
 				;;
 		3 )
-				echo "Ouvrir Support 3"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Supports/Support3.pdf)
+				$(./menuSupports.sh)
+
 				;;
 		4 )
-				echo "Ouvrir Support 4"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Supports/Support4.pdf)
+				$(./menuSupports.sh)
 				;;
 		5 )
-				echo "Ouvrir Support 5"
+				$(xdg-open  http://localhost/Projet_Prog_linux-master/Ressources/Supports/Support5.pdf)
+				$(./menuSupports.sh)
 				;;
 	esac
 else
